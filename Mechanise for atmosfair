@@ -1,0 +1,12 @@
+import mechanize
+br = mechanize.Browser()
+br.set_all_readonly(False)    
+br.set_handle_robots(False)   
+br.set_handle_refresh(False)  
+
+response = br.open(url)
+print response.read()
+
+for form in br.forms():
+    print "Form name:", form.name
+    print form # I get an error here... Not sure how to access the forms on these websites

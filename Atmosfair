@@ -1,0 +1,4 @@
+from selenium import webdriver
+driver = webdriver.Chrome('/Users/devanjitesse/Downloads/chromedriver')
+driver.get('https://www.atmosfair.de/en/offset/flight')
+driver.find_element_by_name('airport_1')
